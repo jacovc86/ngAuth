@@ -1,0 +1,13 @@
+form#register.auth.form-inline(ng-submit="signup()" ng-disable="register.$invalid || register.$pending" name="register" novalidate)
+	input.form-control#username(type="text" check-duplicity name="username" ng-model="user.username" placeholder="Username"  ng-minlength="6" ng-maxlength="14" feedback required)
+	input.form-control#email(type="email" check-duplicity name="email" ng-model="user.email" placeholder="Email" ng-pattern="/^[^\@]+@[^\@]+\.[^\@]{2,}$/" feedback required)
+	input.form-control#firstname(type="text" name="fname" ng-model="user.fname" placeholder="First Name" ng-minlength="2" ng-maxlength="16" feedback required)
+	input.form-control#lastname(type="text" name="lname" ng-model="user.lname" placeholder="Last Name" ng-minlength="2" ng-maxlength="16" feedback required)
+	input.form-control#password(type="password"  name="password" ng-model="user.password" placeholder="Password" ng-minlength="8" ng-maxlength="14" feedback required)
+	input.form-control#password2(type="password" name="password2" ng-model="user.password2" placeholder="Re-Type Password" match="user.password" ng-minlength="8" ng-maxlength="14" feedback required)
+	button.btn.btn-primary#submit-form(type="submit" ng-class="{'waiting' : loading}" ng-click="register.$setPristine()") Sign Up
+	h5.inline(ng-show="msg.inputFeedback").inline
+		span(class="label label-{{msg.inputFeedback.status}}") {{msg.inputFeedback.text}}
+	h5.inline
+		span.label.label-info Already Registered?
+		span(ng-click="showReg=false").label.label-primary.pointer Login

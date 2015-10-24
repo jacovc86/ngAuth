@@ -1,0 +1,36 @@
+* {
+	border-radius: 0 !important;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+.nav {
+	padding:10px;
+}
+span#brand {
+	color: #B57547;
+	padding-right: 2rem;
+}
+#name {
+	font-family: Verdana, sans-serif;
+}
+.auth {
+	margin-top: 10px;
+	margin-right:10px;
+}
+form#register input.ng-dirty {
+	border-color: red;
+}
+form#register input.ng-valid.ng-dirty {
+	border-color: green;
+}
+@keyframes wait {
+	from {background: #265CBF;}
+	to { background: #3DAD2A; }
+}
+.waiting {
+	animation: wait 5s infinite;
+}

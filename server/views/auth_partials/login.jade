@@ -1,0 +1,9 @@
+form.form-inline(ng-submit="login(credentials)")
+	input.form-control#username(autofocus placeholder="Username" ng-model="credentials.username" name="username")
+	input.form-control#password(type="password" placeholder="Password" ng-model="credentials.password" name="password")
+	button.btn.btn-primary#submitLogin(type="submit") Log In
+	h5.inline(ng-show="msg.inputFeedback").inline
+		span(class="label label-{{msg.inputFeedback.status}}") {{msg.inputFeedback.text}}
+	h5.inline
+		span.label.label-info Not registered yet?
+		span(ng-click="showReg=true").label.label-primary.pointer Register

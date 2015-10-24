@@ -1,0 +1,27 @@
+.inline {
+	display:inline;
+}
+.pointer {
+	cursor: pointer;
+}
+.no-margin {
+	margin:0;
+	display:inline;
+}
+.no-padding {
+	padding:0;
+}
+.red {
+	background:red;
+}
+.absolute {
+	position: absolute;
+}
+.fullWidth {
+	width:100%;
+}
+.no-select {
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}

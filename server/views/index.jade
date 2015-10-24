@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	div.no-select.container-fluid.site-wrapper(ng-controller="mainCtrl" )
+		nav.navbar.navbar-default
+			div.container-fluid(ng-controller="authCtrl" ng-include="'auth_partials/auth_forms.jade'")
+		div.container-fluid(ui-view="dashboard")
+
+	
+
+		

@@ -1,0 +1,20 @@
+div.navbar-header
+	a.navbar-brand(href='#') 
+		span#brand.glyphicon.glyphicon-sunglasses Follow
+ul.nav.navbar-nav(ng-if="!currentUser")
+	li(ng-show="!showReg")
+		login.auth
+	li(ng-show="showReg")
+		register.auth
+ul.nav.navbar-nav(ng-if="currentUser")
+	li(ng-if="currentUser.picture")
+		img(ng-src="{{currentUser.picture}}")
+	li
+		h3#name {{currentUser.name.first+' '+currentUser.name.last}}
+	li
+		span.pointer(ng-click="logout()").label.label-danger Logout
+ul.nav.navbar-nav.navbar-right
+	li(ng-if="!currentUser")
+		img.pointer(ng-click="fb_connect()" ng-src="images/FacebookConnectButton.png" height="30")
+		br
+		span(ng-if="showReg" ng-click="mockReg()").label.label-primary Mock Registration Data
